@@ -1,0 +1,544 @@
+
+Gimp: Enhance
+
+Gimp：提高技巧
+
+
+Gimp contains a little-known back door to some powerful layout and preset 
+features. Michael J Hammel picks the lock and roots through the stock.
+
+
+对于一些强大的布局和预设的特性 ，Gimp有一个鲜为人知的后门。 ——Michael J Hammel说。
+
+
+
+Gimp has many features that are seldom explored
+by the new or even experienced user. Most users
+are aware that in version 2.6 the menu bar in the
+Toolbox has been replaced by an eyeball-shot of Wilbur, the
+Gimp mascot. However, few realise that you can get rid of
+those probing eyes by adding the following line to the
+~/.Gimp-2.6/Gimprc file:
+(toolbox-wilber no)
+
+
+Gimp有许多的特性是新手乃至有一定使用经验的老手都不知道的。大部分用户发现，在版本2.6中，工具箱里的菜单栏被换成了Wilber （Gimp的吉祥物）的眼睛。然而，很少人知道你其实可以躲开这双犀利的眼睛，只要你在文件~/.Gimp-2.6/gimprc中加上以下这行：
+(toolbox-wilber no)
+
+
+Another hidden feature lets you connect your mouse
+wheel to certain events, such as scaling the current brush
+size. This makes working with brushes a pleasant experience
+when you work with various sizes of image windows.
+
+
+另一个隐藏特性可以让你将鼠标滚轮对应某些活动，比如调整画笔大小。这使得在不同大小的图片窗口里用画笔工作成了一个愉悦的经历。
+
+
+
+Two areas of concern to new Gimp users, whether at
+home hobbyists or experienced artists, are the default
+window layout and the difficulty encountered trying to
+configure Gimp’s tools. Few users are aware that you can hide
+all windows except the image window by simply hitting the
+Tab key (hitting it again brings the windows back). But this
+only hides the windows and doesn’t actually change their
+layout on the screen.
+
+
+Gimp新手用户——不管是在家的爱好者还是专业的艺术家——最关心的两个问题就是Gimp默认的窗口布局和设置Gimp工具的种种困难。很少用户知道你可以隐藏除了画布窗口以外的其他所有窗口，只要轻按Tab键即可（再按一下就可以让那些窗口回来）。但这样做仅仅是隐藏了其他窗口，并没有真正改变它们在屏幕上的布局。
+
+
+
+Both of these problem areas can be addressed with
+hidden features in Gimp. And that’s exactly what Gimp Paint
+Shop is all about. New users of Gimp are sometimes put off
+by Gimp’s multiple windows and the positions they take
+within a desktop layout. Often this happens when the user is
+migrating from Windows or Photoshop where MDI (multiple
+document interface) causes all windows of an application to
+live within a single parent window. With Gimp, the layout uses
+SDI (single document interface) where each window of a
+single application is independent of other windows in the
+same application.
+
+这两个问题都可以通过Gimp的隐藏特性来解决。而且，这就是Gimp 和Paint Shop（译者注：PaintShop是一款可与photoshop媲美的绘图软件。)等软件的意义所在。Gimp的新手有时会因为Gimp的多重窗口和复杂的桌面布局而耽误了做图时间。这种情况常常发生在从Windows或Photoshop等MDI（multiple document interface，多文档界面）环境下转移过来的用户，这些多文档界面的环境下，同一个应用的所有子窗口都属于一个父窗口。而Gimp的窗口布局则是SDI（single document interface，单文档界面），即同一个应用的每个子窗口都各自独立。
+
+
+(以下为图片旁带<的注释小字：
+Map keyboard and mouse buttons to Gimp events using
+the Preferences > Input Devices > Input Controllers dialog.
+
+
+设置键盘快捷键和鼠标左右键对应的Gimp活动，在首选项（Preferences）>输入设备（Input Devices）>配置扩展输入设备（Input Controllers）的对话框中。
+）
+
+
+New users, especially experienced designers and artists,
+also run into difficulty when setting up Gimp’s tool to perform
+various tasks. It can be confusing, for example, to know which
+brush to use with the Paintbrush versus which to use with the
+Eraser, not to mention how you might configure the Tool
+Options for each. Having each tool use a different brush and
+configuration can make things even more perplexing.
+
+
+
+有的新手，特别是有经验的设计师或艺术家，还陷入了如何设置Gimp工具以完成各种作品的困境中。有些东西很让人迷茫，比如说用画笔工具（Paintbrush）时用什么画笔，用橡皮擦工具（Eraser）时用什么画笔，更别提该怎么设置这些工具选项。每一种工具对应的不同画笔和设置让事情变得更复杂了。
+
+
+（以下为图片旁带<的注释小字：
+This is the original
+window layout for
+Gimp, without the
+GPS updates.
+
+
+这是Gimp原本的窗口布局，在没有GPS（译者注：Gimp Paint Studio，可以为你的gimp增加一系列画笔 工具箱和更多东西,让你的工作更上一层楼。）改造的情况下。
+
+
+
+）
+
+
+
+Last month We showed how to create an iPod advertisement using Gimp.
+
+
+上个月我们演示了如何用Gimp做一张iPod广告。
+
+
+（以下为页脚文字，不翻译，第一页完：
+82     LXF119 June 2009
+LXF119.tut_gimp 82
+www.linuxformat.com
+8/4/09 3:49:3 pm
+）
+
+
+
+
+the interface
+
+界面
+
+
+Ramón Miranda ran into these very issues and decided to
+do something about it. Starting with Gimp’s built-in tool
+presets and with a little help from the Gimp community,
+Ramón was able to configure Gimp to ease the confusion for
+new users. The result of his work is what he calls Gimp Paint
+Shop, or GPS.
+
+
+Ramón Miranda就是陷入了这样的困境，并且他下决心做些什么。通过Gimp社区的一些帮忙，利用Gimp内置的工具预设，Ramón完成了Gimp的配置，解决了困扰新手用户许久的问题。他的工作结果就是他口中的Gimp Paint Shop,简称GPS。
+
+
+
+GPS is a collection of data files and Gimp configuration
+files that, once installed, ease experienced artists into the
+Gimp world. While many users and developers continue the
+long debate about which is better, MDI or SDI, Ramon
+decided to create a layout for Gimp’s windows that simulates
+the former yet works within the rules of the latter, while at the
+same time adding configurations that ease the use of Gimp
+for many common drawing and painting tasks.
+
+
+GPS是一系列数据文件和Gimp配置文件的集成，一旦装上它，艺术家就能顺利地进入Gimp的世界。虽然很多用户和开发者仍在争论MDI和SDI哪个更好，Ramon还是决定为Gimp窗口制作出一个可以模拟出作品编辑后的预览图同时还能为常见的绘画、喷漆任务自动增加一些配置文件的工具。
+
+
+
+Of course, GPS isn’t for everyone. For a start, it requires a
+large display, typically 1280x960 or better, although you can
+alter this with your window layout. Secondly, its primary use is
+for artists who focus on using Gimp for drawing and painting
+exclusively, not for photo enhancement. The configurations
+installed with GPS are mainly for people who already know
+how to draw but are not yet familiar with using Gimp.
+
+
+当然，GPS不是每个人都适用的。首先，它需要一个大的显示器，特别是分辨率至少要在1280x960以上，虽然你可以通过你的窗口布局来更改分辨率。其次，它主要用途是让一部分艺术家专注与绘制图片，不是为了用于照片美化。GPS里装好的配置文件主要是为那些已经知道如何绘制一张图片、但不熟悉Gimp的人们服务的。
+
+
+
+Package contents
+
+
+包含的内容
+
+
+
+GPS was originally packaged in a RAR file, then later
+repackaged into a 7zip
+archive. Neither are common
+Linux archive formats, so I’ve
+repackaged GPS again as a
+typical tar.gz file that you can
+snag from my website (see
+below) or from the LXFDVD.
+
+
+GPS最早是被压缩在一个RAR压缩包里，后来又被压缩在一个7zip压缩包里（译者注：和RAR类似，7zip也是一个压缩解压软件）。这两种都不是Linux下常见的归档文件格式，所以我又重新将GPS打包成一个典型的tar.gz文件，你可以去我的网站上下载（看网页下面），或从LXF的DVD中获得。
+
+
+
+The package contains the following directories:
+brushes A collection of brushes.
+palettes A collection of colour palettes.
+tool-options A collection of tool presets.
+It also contains two files used to configure Gimp:
+sessionrc Initialises the window layout for Gimp.
+toolrc Adds two commonly used tools to the Toolbox.
+
+
+压缩包中包含有以下内容：
+brushes：这是一个笔刷的集合。
+tool-option：这是一个工具预设的集合。它还包含了两个用于配置Gimp的文件。
+sessionrc：可以将Gimp窗口布局以特定方式初始化。
+toolrc：可以往工具箱（Toolbox）里增添两个常用的工具。
+
+
+
+
+（以下为红灰提示框中的文字：
+
+
+GPS archive and docs
+
+
+关于GPS的归档文件和文档
+
+
+The original documentation was written in Spanish and 
+provided in PDF format. This was later translated to English 
+and placed on a web page. I copied this and merged it with 
+the original images from the Spanish PDF to produce an 
+edited English language version of the PDF.
+
+The document, like GPS itself, is GPL licensed, and I’ve 
+also made available the OpenOffice.org version I created to 
+generate the PDF:
+ www.graphics-muse.org/source/GPS.odt
+ www.graphics-muse.org/source/GPS.pdf
+ www.graphics-muse.org/source/gps_v1.0.tar.gz.
+
+
+最早的文档是一份用西班牙语写的PDF文件。这份文档后来被翻译成英语并放在了网页上。我复制了网页上的文字并与原本那份PDF文件里的图片结合起来，做成了一个英文版的PDF。
+
+这份文档，和GPS本身一样，都是经过GNU通用共用许可授权的。同时我还做了一份OpenOffice.org版本的文档，下载地址见下：
+ www.graphics-muse.org/source/GPS.odt
+ www.graphics-muse.org/source/GPS.pdf
+ www.graphics-muse.org/source/gps_v1.0.tar.gz.
+
+）
+
+
+(以下为文章正中间的大字插话：
+“GPS is for artists who
+focus on using Gimp for
+drawing and painting”
+
+
+“GPS是为了让一些艺术家专注于绘制图片。”
+）
+
+
+
+
+（以下为图片旁带<的提示小字：
+The GPS window layout for Gimp – an ideal base of operations for artists who
+focus on drawing and painting, but who aren’t yet familiar with the program.
+
+
+这是GPS为Gimp设置的窗口布局 —— 为那些想要专注于绘制图片但还不熟悉这款软件的艺术家铺好了操作基础。
+）
+
+
+
+Most Gimp users know about brushes and where to find
+them. What they don’t know is that various brushes are best
+used with specific tools. The complete collection of brushes in
+GPS is actually multiple smaller collections of brushes, each
+designed for use with different drawing and painting tools
+found in the Gimp toolbox.
+Instead of choosing the brush
+and then the tool from the
+Toolbox, just choose the tool
+and then select one of the GPS
+tool presets. More on using tool
+presets in a
+moment. Let’s finish the installation first.
+
+
+
+Download the archive of choice and
+unpack it into any directory. To utilise the
+window layout changes and tool presets,
+Gimp needs to be restarted. If Gimp is
+currently running, exit out of it. The installation
+process is manual – you’ll be copying from a
+command line. The easiest way to install these
+files is to copy them all at once to your Gimp
+directory. In the following example, the tar.gz
+version of the archive is used.
+% tar xvzf gps_v1.0.tar.gz
+% cd gps_v1.0
+% cp -r * ~/.Gimp-2.6/
+
+
+
+
+
+
+
+（以下为图片旁带<的提示小字：
+
+The GPS
+presets for the
+Paintbrush tool.
+）
+
+
+
+Gimp window layout
+
+
+
+The installation of GPS is copied in a new
+sessionrc file. This file is read by Gimp at
+startup to place Gimp’s various windows in the
+same position on the desktop as the last time
+Gimp was run. The file is rewritten when Gimp
+exits. By copying in the GPS version of the
+sessionrc file the window positions are re-initialised to the
+preferred GPS layout. Any changes that are made during the
+Gimp session will be saved to the sessionrc file.
+
+
+
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+
+
+（以下为页脚文字，不翻译，第二页完：
+www.tuxradar.com
+LXF119.tut_gimp 83
+June 2009 LXF119     83
+8/4/09 3:49:4 pm
+）
+
+
+
+Tutorial Gimp
+
+
+
+layers, channels, paths, undo, selection and histogram. This
+dock is a bit crowded but it does provide quick and ready
+access to features without having to use menus.
+
+
+
+At the bottom of the right-hand side docks is a dock with
+windows related to brushes, gradients and patterns. This
+grouping is consistent with the grouping of windows for
+managing the foreground and background colours. The
+layout is very intuitive.
+
+
+
+With this updated layout users will no longer have to scan
+the Windows menu or look for windows hidden under other
+windows (as is often the case using SDI and Linux window
+managers). Now, all the windows are opened immediately
+when Gimp starts and are stored in docks where they can be
+easily located.
+
+
+
+Using tool presets
+
+
+（以下为图片旁带<的提示小字：
+GPS provides ways of quickly setting the foreground and background colours
+by using multiple related windows in a single dock.
+）
+
+
+
+
+The GPS layout makes a number of changes to Gimp’s
+default window layout. First, it opens nearly all the available
+windows into a set of five docks. It then places two of these
+docks beneath the Gimp Toolbox on the left-hand side of the
+display. The other three docks are added as a set of
+connected docks on the right side of the display.
+Finally, a blank image window is opened by default. The
+blank window is new in Gimp 2.6. It’s actually a placeholder
+for the first image window you create or open (File > New, for
+example), so it can be easily adjusted. For some users this
+gives the impression of the familiar MDI interface provided by
+Photoshop. For old timers like me, however, it just takes up a
+lot of screen space. For artists it doesn’t matter much, since
+they’re likely to be using a lot of that empty space while
+editing their artwork.
+Experiment with this layout by making changes to the
+docks, window sizes and positions. If the changes aren’t
+suitable, just exit Gimp and copy in the original GPS
+sessionrc file, then restart Gimp.
+Ramón took special care in selecting which dock to add a
+window. For example, the Tool Options is in a dock by itself
+and is directly beneath the Toolbox – right where you’d expect
+to find it. Beneath this dock is another dock with tools for
+setting the foreground and background colours.
+On the right side of the display, the top dock has the
+Navigation window. Many users are familiar with the Quick
+Navigation button on the lower-right of the image window.
+However, this feature also has its own window. Ramón placed
+this window at the top of the toolbar, making it easy to scan
+an image and position it using a visible window instead of a
+pop up feature. Below the Navigation window is a dock with
+most of the rest of the windows an artist will need, including
+The next big improvement brought by GPS is the tool presets.
+Most users probably aren’t familiar with these. A preset is
+simply the Tool Options for a particular tool saved to a file. For
+example, when you choose the Text tool from the Toolbox you
+usually have to use the Tool Options to update the Font, Size
+and Hinting settings for a particular text format. The Tool
+Options dialog has a save feature so these settings can be
+named and saved to a file. Later, you can use another Tool
+Options feature to load those settings by simply selecting the
+named preset. GPS provides one or more presets for the
+following tools:
+Airbrush.
+Bucket Fill.
+Clone.
+Eraser.
+Ink.
+Paintbrush.
+Rectangle Select.
+Smudge.
+It also has presets for a Mix Brush tool. This tool is only
+available, however, if your version of Gimp has the Gimp
+Painter patch applied. Most users won’t have this and they
+won’t be able to install it unless they’re familiar with building
+Gimp from source code.
+Take a look at the Tool Options window by choosing the
+Paintbrush tool. The Tool Options is the box directly below the
+With GPS, it’s not just a paintbrush, but a collection of
+paint and drawing tools rolled into one. Further, each Gimp
+tool becomes a collection of tools using GPS presets!
+Never miss another issue Subscribe to the #1 source for Linux on p102.
+84     LXF119 June 2009
+LXF119.tut_gimp 84
+www.linuxformat.com
+8/4/09 3:49:4 pm
+Gimp Tutorial
+Toolbox. At the bottom of this window are a set of four buttons.
+These buttons are used for managing presets for the currently
+selected tool. These buttons are, from left to right: save, load,
+delete and reset.
+When you make changes to the Tool Options dialog you
+can save those changes to a named preset. Just click on the
+save button. This will present a list of existing named presets.
+Choosing one of the named presets will overwrite its saved
+settings with the settings from the Tool Options window.
+Alternatively, the New Entry menu option can be used to
+create a new named preset. Be careful saving to an existing
+named preset as there is no undo operation to return to the
+previous saved settings.
+Once a preset has been saved, it can be loaded using the
+load button. This button also provides a menu of named
+presets from which to choose. Selecting one of these will
+update the Tool Options window with the saved configuration.
+The delete button should be used with tender care. It will
+remove all named presets. If this happens accidentally, just
+reinstall the GPS package. If you’re paranoid about losing
+presets you should consider setting up a Cron job to back up
+your presets periodically. The last button in the Tool Options
+window, reset, is used to
+return the Tool Options
+settings to their default state.
+Resetting the Tool Options
+window will not affect any of
+your saved presets.
+Gimp Painter
+This patch creates a new tool for blending colours on the
+image window. The patch was created by a Japanese
+developer and can be found on SourceForge. There’s also  
+a brief discussion on how to apply the patch and build
+Gimp on Blogspot. 
+Gimp Painter can be found at http://sourceforge.jp/
+projects/Gimp-painter.  
+For the discussion, visit http://klettersblog.blogspot.
+com/2008/10/Gimp-painter.html.
+I’d love to provide more advanced examples of this
+wonderful package, but alas, while I understand Gimp fully I’m
+far from an accomplished artist.
+Summary
+GPS is a relatively simple extension to Gimp considering it
+has no additional code and offers no additional plugins.
+Instead, it’s completely based on less well known and much
+less discussed features of
+Gimp – presets and docks –
+that make it a powerful image
+editing tool. A little
+experimentation with GPS
+shows that this package is
+ideal for users with drawing
+tablets. This is because the stylus of the drawing tablet can
+now take on the characteristics of real world drawing tools
+instead of just being a different kind of input device. Most of
+the presets include settings for brush dynamics such as
+Pressure, Velocity, Hardness and Size. All of these are
+meaningful specifically to tablet users.
+But don’t think that GPS is just for experienced users
+with tablets. Quite the contrary. The GPS window layout and
+predefined Tool Options make Gimp behave much more like
+real world drawing and paint tools. And that in itself will make
+Gimp more inviting to new users. LXF
+“A little experimentation
+shows GPS is the ideal
+tool for tablet users”
+Quick colour changes
+Before getting into what you can actually do with this package
+there is one additional feature to examine. GPS provides a
+collection of colour palettes. These contain colours that many
+artists would find useful, including human skin and hair, jeans,
+grass, water and flowers.
+Using the palettes effectively requires using the GPS
+sessionrc configuration. This places the colour palette
+windows in a dock at the bottom of the Toolbox window. There
+are multiple windows here available in four tabs. To use the
+GPS palettes, choose a palette from the third tab then select
+the colour to use from the second tab. The second tab can be
+used to set either the foreground or background colours using
+the selected colour palette.
+The natural
+tool presets
+available for
+use in Gimp.
+Touring the GPS presets
+So what can GPS do for the artist? Examining the PDF
+documentation will give you some clue here. Ramón provides
+an excellent comparison of the various tools performing the
+same functions (drawing lines and a small ball). Some of those
+examples are included here.
+Dabbling with the many presets, it becomes quickly
+apparent just how powerful this package is for configuring
+Gimp to behave like specific real-world tools, such as a
+graphite pencil or a BIC pen.
+The lines shown here were drawn after choosing the
+named preset. The differences are distinct and very much
+simulate the real artist tool for which the preset is named. The
+only configuration required to achieve this was the selection of
+a GPS preset – no fumbling around for the right brush,
+configuring its spacing, or updating the Tool Options for the
+Paintbrush tool. One click for the load button and one click to
+choose the preset is all it takes.
+Next month We channel the spirit of Godzilla and smash up some buildings!
+www.tuxradar.com
+LXF119.tut_gimp 85
+June 2009 LXF119     85
+8/4/09 3:49:5 pm
+
