@@ -17,6 +17,7 @@ import net.ccbluex.liquidbounce.utils.kotlin.RandomUtils.nextFloat
 import net.ccbluex.liquidbounce.utils.kotlin.RandomUtils.nextInt
 import net.minecraft.client.gui.FontRenderer
 import java.awt.Color
+import java.random
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
